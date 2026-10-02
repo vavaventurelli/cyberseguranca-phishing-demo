@@ -9,12 +9,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lab.css">
 </head>
 <body>
   <div class="grid"></div>
   <header class="topbar">
     <a class="brand" href="#inicio"><span>CYBER</span>/LAB</a>
-    <nav><a href="#ataque">Ataque</a><a href="#defesa">Defesa</a><a href="#quiz">Quiz</a></nav>
+    <nav><a href="#laboratorio">Protótipo</a><a href="#ataque">Ataque</a><a href="#defesa">Defesa</a><a href="#quiz">Quiz</a></nav>
     <span class="safe"><i></i> AMBIENTE SEGURO</span>
   </header>
 
@@ -23,11 +24,30 @@
       <div class="eyebrow">ESTUDO ACADÊMICO · PROTÓTIPO NÃO OPERACIONAL</div>
       <h1>Do <em>phishing</em><br>à folha de pagamento.</h1>
       <p>Uma leitura visual de como engenharia social, falhas de autenticação e controle de acesso podem transformar um clique em impacto financeiro.</p>
-      <a class="cta" href="#ataque">Explorar a cadeia <span>↓</span></a>
+      <a class="cta primary" href="#laboratorio">Iniciar protótipo interativo <span>↓</span></a>
       <div class="hero-card">
         <span>ALVO</span><strong>RH + FINANCEIRO</strong>
         <span>VETOR</span><strong>E-MAIL FALSO</strong>
         <span>RISCO</span><strong>FOLHA ALTERADA</strong>
+      </div>
+    </section>
+
+    <section id="laboratorio" class="section lab-section">
+      <div class="section-head"><span>00</span><div><small>PROTÓTIPO INTERATIVO · DADOS FICTÍCIOS</small><h2>Laboratório do ataque</h2></div></div>
+      <div class="lab-warning"><strong>SIMULAÇÃO SEGURA</strong> Não solicita, transmite ou armazena dados. Tudo abaixo é fictício.</div>
+      <div class="lab-shell">
+        <aside class="lab-steps">
+          <button class="active" data-go="0"><b>01</b><span>E-mail falso</span></button><button data-go="1"><b>02</b><span>Página falsa</span></button><button data-go="2"><b>03</b><span>Sessão</span></button><button data-go="3"><b>04</b><span>Usuário fantasma</span></button><button data-go="4"><b>05</b><span>Folha alterada</span></button><button data-go="5"><b>06</b><span>Resposta</span></button>
+        </aside>
+        <div class="lab-screen">
+          <div class="screen-bar"><i></i><i></i><i></i><span id="screenUrl">mail.empresa-exemplo.test</span><b>DEMO</b></div>
+          <article class="scene active" data-scene="0"><small>CAIXA DE ENTRADA · MENSAGEM EXTERNA</small><div class="demo-mail-head"><div class="avatar">TI</div><div><strong>Suporte de TI</strong><span>suporte-ti@empresa-exemplo.test</span></div><time>09:14</time></div><h3>Ação obrigatória: revalide seu acesso ao Sistema de Folha até HOJE</h3><p>Prezada Rozana, sua conta será suspensa caso a revalidação não seja concluída hoje.</p><button class="danger-action" data-next>Revalidar meu acesso agora</button><div class="clue"><b>SINAIS:</b> autoridade + urgência + medo + link inesperado</div></article>
+          <article class="scene" data-scene="1"><div class="fake-login"><div class="rh-mark">RH<span>+</span></div><small>SISTEMA INTERNO DE RH</small><h3>Revalidação de acesso</h3><label>E-mail corporativo<input value="rozana@empresa-exemplo.test" readonly></label><label>Senha<input value="senha-demonstracao" type="password" readonly></label><button class="danger-action" data-next>Simular envio de dados fictícios</button><p class="form-safe">NÃO FUNCIONAL · SOMENTE ILUSTRATIVO</p></div><div class="clue"><b>ALERTA:</b> o domínio não é o endereço oficial.</div></article>
+          <article class="scene terminal" data-scene="2"><div class="term-line"><span>09:15:02</span> credencial_demo recebida</div><div class="term-line"><span>09:15:04</span> sessão fictícia reutilizada</div><div class="term-line success"><span>09:15:05</span> acesso simulado como rozana.rh</div><div class="token">TOKEN DEMO <b>••••••••••••7A2F</b></div><p>A consequência é representada sem capturar ou enviar informação.</p><button class="next-action" data-next>Avançar para o painel →</button></article>
+          <article class="scene" data-scene="3"><div class="dashboard-head"><div><small>ADMINISTRAÇÃO</small><h3>Usuários e permissões</h3></div><span class="alert-chip">1 ANOMALIA</span></div><div class="data-row head"><span>USUÁRIO</span><span>SETOR</span><span>PERFIL</span><span>ORIGEM</span></div><div class="data-row"><b>rozana.rh</b><span>RH</span><span>Operador</span><span>Legítimo</span></div><div class="data-row"><b>gestor.financeiro</b><span>Financeiro</span><span>Aprovador</span><span>Legítimo</span></div><div class="data-row anomaly"><b>funcionario.demo</b><span>RH</span><span>Administrador</span><strong>INDEVIDO</strong></div><button class="next-action" data-next>Ver impacto na folha →</button></article>
+          <article class="scene" data-scene="4"><div class="dashboard-head"><div><small>FOLHA DE PAGAMENTO</small><h3>Lançamentos do mês</h3></div><span class="alert-chip">ALTERAÇÃO</span></div><div class="data-row head"><span>COLABORADOR</span><span>MATRÍCULA</span><span>VALOR</span><span>STATUS</span></div><div class="data-row"><b>Maria Alves</b><span>000184</span><span>R$ 5.420,00</span><span>Aprovado</span></div><div class="data-row"><b>Carlos Lima</b><span>000221</span><span>R$ 6.150,00</span><span>Aprovado</span></div><div class="data-row anomaly"><b>Funcionário Demo</b><span>DEMO-001</span><strong>R$ 2.850,00</strong><span>PENDENTE</span></div><button class="next-action" data-next>Conter o incidente →</button></article>
+          <article class="scene response-scene" data-scene="5"><small>RESPOSTA A INCIDENTE</small><h3>O ataque foi detectado. E agora?</h3><div class="response-grid"><b>01<span>PARAR</span></b><b>02<span>REPORTAR</span></b><b>03<span>CONTER</span></b><b>04<span>REVISAR</span></b><b>05<span>AUDITAR</span></b><b>06<span>PRESERVAR</span></b></div><div class="contained">✓ SIMULAÇÃO CONTIDA · NENHUM DADO REAL UTILIZADO</div><button class="next-action" data-restart>Reiniciar ↻</button></article>
+        </div>
       </div>
     </section>
 

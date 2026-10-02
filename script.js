@@ -1,1 +1,6 @@
 document.querySelectorAll('.answers button').forEach(button=>{button.addEventListener('click',()=>{document.querySelectorAll('.answers button').forEach(b=>b.classList.remove('ok','bad'));const correct=button.dataset.correct==='true';button.classList.add(correct?'ok':'bad');document.querySelector('#feedback').textContent=correct?'CORRETO — confirme por um canal oficial antes de agir.':'ATENÇÃO — a urgência é parte da manipulação. Pare e confirme por outro canal.'})});
+const urls=['mail.empresa-exemplo.test','portal-rh.example.test/revalidacao','console.demo/sessao','rh.demo/usuarios','folha.demo/lancamentos','resposta.demo/incidente'];
+function showScene(index){document.querySelectorAll('.scene').forEach((el,i)=>el.classList.toggle('active',i===index));document.querySelectorAll('.lab-steps button').forEach((el,i)=>el.classList.toggle('active',i===index));document.querySelector('#screenUrl').textContent=urls[index]}
+document.querySelectorAll('[data-next]').forEach(button=>button.addEventListener('click',()=>{const current=[...document.querySelectorAll('.scene')].findIndex(el=>el.classList.contains('active'));showScene(Math.min(current+1,5))}));
+document.querySelectorAll('[data-go]').forEach(button=>button.addEventListener('click',()=>showScene(Number(button.dataset.go))));
+document.querySelector('[data-restart]').addEventListener('click',()=>showScene(0));
