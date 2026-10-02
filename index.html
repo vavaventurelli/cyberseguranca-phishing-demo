@@ -3,117 +3,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Demonstração acadêmica e não operacional sobre phishing e proteção da folha de pagamento.">
-  <title>Do phishing à folha de pagamento</title>
+  <meta name="robots" content="noindex,nofollow">
+  <title>Portal do Colaborador | Vértice</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="lab.css">
 </head>
 <body>
-  <div class="grid"></div>
-  <header class="topbar">
-    <a class="brand" href="#inicio"><span>CYBER</span>/LAB</a>
-    <nav><a href="#laboratorio">Protótipo</a><a href="#ataque">Ataque</a><a href="#defesa">Defesa</a><a href="#quiz">Quiz</a></nav>
-    <span class="safe"><i></i> AMBIENTE SEGURO</span>
+  <header>
+    <a class="logo" href="#" aria-label="Vértice"><span>V</span> VÉRTICE</a>
+    <div class="header-right"><span>Portal do Colaborador</span><a href="#ajuda">Precisa de ajuda?</a></div>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
-      <div class="eyebrow">ESTUDO ACADÊMICO · PROTÓTIPO NÃO OPERACIONAL</div>
-      <h1>Do <em>phishing</em><br>à folha de pagamento.</h1>
-      <p>Uma leitura visual de como engenharia social, falhas de autenticação e controle de acesso podem transformar um clique em impacto financeiro.</p>
-      <a class="cta primary" href="#laboratorio">Iniciar protótipo interativo <span>↓</span></a>
-      <div class="hero-card">
-        <span>ALVO</span><strong>RH + FINANCEIRO</strong>
-        <span>VETOR</span><strong>E-MAIL FALSO</strong>
-        <span>RISCO</span><strong>FOLHA ALTERADA</strong>
+    <section class="welcome">
+      <div class="welcome-inner">
+        <span class="pill">AMBIENTE CORPORATIVO</span>
+        <h1>Tudo sobre sua jornada<br>em um só lugar.</h1>
+        <p>Acesse documentos, benefícios, holerites e informações do seu vínculo com segurança.</p>
+        <div class="features"><div><i>✓</i><span><b>Documentos</b>Holerites e informes</span></div><div><i>✓</i><span><b>Benefícios</b>Consulte seus planos</span></div><div><i>✓</i><span><b>Atendimento</b>Fale com o RH</span></div></div>
       </div>
     </section>
 
-    <section id="laboratorio" class="section lab-section">
-      <div class="section-head"><span>00</span><div><small>PROTÓTIPO INTERATIVO · DADOS FICTÍCIOS</small><h2>Laboratório do ataque</h2></div></div>
-      <div class="lab-warning"><strong>SIMULAÇÃO SEGURA</strong> Não solicita, transmite ou armazena dados. Tudo abaixo é fictício.</div>
-      <div class="lab-shell">
-        <aside class="lab-steps">
-          <button class="active" data-go="0"><b>01</b><span>E-mail falso</span></button><button data-go="1"><b>02</b><span>Página falsa</span></button><button data-go="2"><b>03</b><span>Sessão</span></button><button data-go="3"><b>04</b><span>Usuário fantasma</span></button><button data-go="4"><b>05</b><span>Folha alterada</span></button><button data-go="5"><b>06</b><span>Resposta</span></button>
-        </aside>
-        <div class="lab-screen">
-          <div class="screen-bar"><i></i><i></i><i></i><span id="screenUrl">mail.empresa-exemplo.test</span><b>DEMO</b></div>
-          <article class="scene active" data-scene="0"><small>CAIXA DE ENTRADA · MENSAGEM EXTERNA</small><div class="demo-mail-head"><div class="avatar">TI</div><div><strong>Suporte de TI</strong><span>suporte-ti@empresa-exemplo.test</span></div><time>09:14</time></div><h3>Ação obrigatória: revalide seu acesso ao Sistema de Folha até HOJE</h3><p>Prezada Rozana, sua conta será suspensa caso a revalidação não seja concluída hoje.</p><button class="danger-action" data-next>Revalidar meu acesso agora</button><div class="clue"><b>SINAIS:</b> autoridade + urgência + medo + link inesperado</div></article>
-          <article class="scene" data-scene="1"><div class="fake-login"><div class="rh-mark">RH<span>+</span></div><small>SISTEMA INTERNO DE RH</small><h3>Revalidação de acesso</h3><label>E-mail corporativo<input value="rozana@empresa-exemplo.test" readonly></label><label>Senha<input value="senha-demonstracao" type="password" readonly></label><button class="danger-action" data-next>Simular envio de dados fictícios</button><p class="form-safe">NÃO FUNCIONAL · SOMENTE ILUSTRATIVO</p></div><div class="clue"><b>ALERTA:</b> o domínio não é o endereço oficial.</div></article>
-          <article class="scene terminal" data-scene="2"><div class="term-line"><span>09:15:02</span> credencial_demo recebida</div><div class="term-line"><span>09:15:04</span> sessão fictícia reutilizada</div><div class="term-line success"><span>09:15:05</span> acesso simulado como rozana.rh</div><div class="token">TOKEN DEMO <b>••••••••••••7A2F</b></div><p>A consequência é representada sem capturar ou enviar informação.</p><button class="next-action" data-next>Avançar para o painel →</button></article>
-          <article class="scene" data-scene="3"><div class="dashboard-head"><div><small>ADMINISTRAÇÃO</small><h3>Usuários e permissões</h3></div><span class="alert-chip">1 ANOMALIA</span></div><div class="data-row head"><span>USUÁRIO</span><span>SETOR</span><span>PERFIL</span><span>ORIGEM</span></div><div class="data-row"><b>rozana.rh</b><span>RH</span><span>Operador</span><span>Legítimo</span></div><div class="data-row"><b>gestor.financeiro</b><span>Financeiro</span><span>Aprovador</span><span>Legítimo</span></div><div class="data-row anomaly"><b>funcionario.demo</b><span>RH</span><span>Administrador</span><strong>INDEVIDO</strong></div><button class="next-action" data-next>Ver impacto na folha →</button></article>
-          <article class="scene" data-scene="4"><div class="dashboard-head"><div><small>FOLHA DE PAGAMENTO</small><h3>Lançamentos do mês</h3></div><span class="alert-chip">ALTERAÇÃO</span></div><div class="data-row head"><span>COLABORADOR</span><span>MATRÍCULA</span><span>VALOR</span><span>STATUS</span></div><div class="data-row"><b>Maria Alves</b><span>000184</span><span>R$ 5.420,00</span><span>Aprovado</span></div><div class="data-row"><b>Carlos Lima</b><span>000221</span><span>R$ 6.150,00</span><span>Aprovado</span></div><div class="data-row anomaly"><b>Funcionário Demo</b><span>DEMO-001</span><strong>R$ 2.850,00</strong><span>PENDENTE</span></div><button class="next-action" data-next>Conter o incidente →</button></article>
-          <article class="scene response-scene" data-scene="5"><small>RESPOSTA A INCIDENTE</small><h3>O ataque foi detectado. E agora?</h3><div class="response-grid"><b>01<span>PARAR</span></b><b>02<span>REPORTAR</span></b><b>03<span>CONTER</span></b><b>04<span>REVISAR</span></b><b>05<span>AUDITAR</span></b><b>06<span>PRESERVAR</span></b></div><div class="contained">✓ SIMULAÇÃO CONTIDA · NENHUM DADO REAL UTILIZADO</div><button class="next-action" data-restart>Reiniciar ↻</button></article>
-        </div>
+    <section class="access">
+      <div class="card">
+        <div class="lock">⌁</div>
+        <h2>Olá, Rozana</h2>
+        <p class="subtitle">Revalide seu acesso ao Portal do Colaborador.</p>
+        <form id="loginForm" autocomplete="off">
+          <label for="email">E-mail corporativo</label>
+          <div class="field"><span>✉</span><input id="email" type="email" value="rozana@empresa-exemplo.test" readonly></div>
+          <label for="password">Senha</label>
+          <div class="field"><span>●</span><input id="password" type="password" value="demonstracao" readonly><button type="button" id="toggle" aria-label="Mostrar senha">👁</button></div>
+          <div class="form-row"><label class="remember"><input type="checkbox" checked> Lembrar meu acesso</label><a href="#">Esqueci minha senha</a></div>
+          <button class="submit" type="submit">Revalidar acesso</button>
+        </form>
+        <div id="message" class="message" role="status">Acesso revalidado. Redirecionando para o portal…</div>
+        <div class="security"><span>◆</span><p><b>Seus dados protegidos</b>Este ambiente utiliza conexão segura e acesso individual.</p></div>
       </div>
-    </section>
-
-    <section id="ataque" class="section">
-      <div class="section-head"><span>01</span><div><small>ANATOMIA DO INCIDENTE</small><h2>A cadeia do ataque</h2></div></div>
-      <p class="note"><strong>Nota técnica:</strong> Wi-Fi público, sozinho, não quebra HTTPS/TLS. O cenário exige uma falha adicional, como rede falsa, sessão mal protegida ou credencial entregue pela vítima.</p>
-      <div class="flow">
-        <article><b>01</b><i>◉</i><h3>Rede pública</h3><p>Ambiente de maior exposição ou uma rede falsa com nome semelhante.</p></article>
-        <article><b>02</b><i>✉</i><h3>Phishing</h3><p>Urgência, medo e falsa autoridade induzem o clique.</p></article>
-        <article><b>03</b><i>▣</i><h3>Página falsa</h3><p>O domínio imita o portal e solicita a “revalidação”.</p></article>
-        <article><b>04</b><i>◇</i><h3>Acesso indevido</h3><p>Credencial ou sessão exposta é reutilizada pelo atacante.</p></article>
-        <article><b>05</b><i>＋</i><h3>Usuário fantasma</h3><p>Uma falha de autorização permite elevar privilégios.</p></article>
-        <article><b>06</b><i>△</i><h3>Folha alterada</h3><p>Pagamento indevido causa impacto e perde rastreabilidade.</p></article>
-      </div>
-    </section>
-
-    <section class="split section">
-      <div>
-        <div class="section-head compact"><span>02</span><div><small>ENGENHARIA SOCIAL</small><h2>O e-mail que cria pressão</h2></div></div>
-        <div class="mail">
-          <div class="mail-top"><span>De: Suporte de TI</span><span class="tag">DOMÍNIO SUSPEITO</span></div>
-          <h3>Ação obrigatória: revalide seu acesso até HOJE</h3>
-          <p>Sua conta foi marcada para revalidação obrigatória ou o acesso será suspenso.</p>
-          <button type="button" disabled>Revalidar meu acesso agora</button>
-          <small>DEMONSTRAÇÃO — botão desativado</small>
-        </div>
-      </div>
-      <div class="signals">
-        <h3>Quatro sinais de alerta</h3>
-        <ol><li><strong>Autoridade</strong><span>Finge ser o suporte de TI</span></li><li><strong>Urgência</strong><span>Impõe prazo “até hoje”</span></li><li><strong>Medo</strong><span>Ameaça suspender o acesso</span></li><li><strong>Ação</strong><span>Centraliza tudo em um botão</span></li></ol>
-      </div>
-    </section>
-
-    <section id="defesa" class="section defense">
-      <div class="section-head"><span>03</span><div><small>DEFESA EM CAMADAS</small><h2>Cada elo precisa de uma barreira</h2></div></div>
-      <div class="matrix">
-        <div class="matrix-head"><span>ETAPA</span><span>RISCO</span><span>BARREIRA</span></div>
-        <div><strong>Rede</strong><span>Rede aberta ou falsa</span><b>VPN + rede confiável</b></div>
-        <div><strong>E-mail</strong><span>Remetente impostor</span><b>Confirmar com a TI</b></div>
-        <div><strong>Página</strong><span>Domínio semelhante</span><b>Abrir pelo favorito</b></div>
-        <div><strong>Credencial</strong><span>Senha reutilizada</span><b>MFA + alerta de acesso</b></div>
-        <div><strong>Permissão</strong><span>Privilégio excessivo</span><b>Menor privilégio</b></div>
-        <div><strong>Pagamento</strong><span>Alteração indevida</span><b>Dupla aprovação + logs</b></div>
-      </div>
-    </section>
-
-    <section id="quiz" class="section quiz">
-      <div class="section-head"><span>04</span><div><small>TESTE RÁPIDO</small><h2>Você clicaria?</h2></div></div>
-      <div class="quiz-box">
-        <p>Você recebe um e-mail urgente pedindo senha para evitar o bloqueio da conta. Qual é a primeira ação segura?</p>
-        <div class="answers">
-          <button data-correct="false">Clicar para não perder o prazo</button>
-          <button data-correct="true">Confirmar com a TI por um canal oficial</button>
-          <button data-correct="false">Responder ao próprio e-mail</button>
-        </div>
-        <div id="feedback" aria-live="polite">Selecione uma resposta.</div>
-      </div>
-    </section>
-
-    <section class="final">
-      <small>REGRA DE OURO</small>
-      <h2>Pare. Confira.<br><em>Proteja. Reporte.</em></h2>
-      <p>Se o pedido envolve senha, MFA, permissão ou pagamento, verifique por um canal oficial antes de agir.</p>
+      <p class="support">Dificuldades para acessar? <a href="#ajuda">Contate o suporte interno</a></p>
     </section>
   </main>
-  <footer><span>Cybersegurança · Apresentação final</span><span>Protótipo educacional — não coleta dados</span></footer>
+
+  <footer id="ajuda"><span>© 2026 Vértice · Recursos Humanos</span><span>Privacidade &nbsp;·&nbsp; Termos de uso &nbsp;·&nbsp; Segurança</span></footer>
+  <div class="demo-badge">PROTÓTIPO ACADÊMICO · NÃO COLETA DADOS</div>
   <script src="script.js"></script>
 </body>
 </html>
