@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Demonstração acadêmica e não operacional sobre phishing e proteção da folha de pagamento.">
+  <title>Do phishing à folha de pagamento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grid"></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span>CYBER</span>/LAB</a>
+    <nav><a href="#ataque">Ataque</a><a href="#defesa">Defesa</a><a href="#quiz">Quiz</a></nav>
+    <span class="safe"><i></i> AMBIENTE SEGURO</span>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="eyebrow">ESTUDO ACADÊMICO · PROTÓTIPO NÃO OPERACIONAL</div>
+      <h1>Do <em>phishing</em><br>à folha de pagamento.</h1>
+      <p>Uma leitura visual de como engenharia social, falhas de autenticação e controle de acesso podem transformar um clique em impacto financeiro.</p>
+      <a class="cta" href="#ataque">Explorar a cadeia <span>↓</span></a>
+      <div class="hero-card">
+        <span>ALVO</span><strong>RH + FINANCEIRO</strong>
+        <span>VETOR</span><strong>E-MAIL FALSO</strong>
+        <span>RISCO</span><strong>FOLHA ALTERADA</strong>
+      </div>
+    </section>
+
+    <section id="ataque" class="section">
+      <div class="section-head"><span>01</span><div><small>ANATOMIA DO INCIDENTE</small><h2>A cadeia do ataque</h2></div></div>
+      <p class="note"><strong>Nota técnica:</strong> Wi-Fi público, sozinho, não quebra HTTPS/TLS. O cenário exige uma falha adicional, como rede falsa, sessão mal protegida ou credencial entregue pela vítima.</p>
+      <div class="flow">
+        <article><b>01</b><i>◉</i><h3>Rede pública</h3><p>Ambiente de maior exposição ou uma rede falsa com nome semelhante.</p></article>
+        <article><b>02</b><i>✉</i><h3>Phishing</h3><p>Urgência, medo e falsa autoridade induzem o clique.</p></article>
+        <article><b>03</b><i>▣</i><h3>Página falsa</h3><p>O domínio imita o portal e solicita a “revalidação”.</p></article>
+        <article><b>04</b><i>◇</i><h3>Acesso indevido</h3><p>Credencial ou sessão exposta é reutilizada pelo atacante.</p></article>
+        <article><b>05</b><i>＋</i><h3>Usuário fantasma</h3><p>Uma falha de autorização permite elevar privilégios.</p></article>
+        <article><b>06</b><i>△</i><h3>Folha alterada</h3><p>Pagamento indevido causa impacto e perde rastreabilidade.</p></article>
+      </div>
+    </section>
+
+    <section class="split section">
+      <div>
+        <div class="section-head compact"><span>02</span><div><small>ENGENHARIA SOCIAL</small><h2>O e-mail que cria pressão</h2></div></div>
+        <div class="mail">
+          <div class="mail-top"><span>De: Suporte de TI</span><span class="tag">DOMÍNIO SUSPEITO</span></div>
+          <h3>Ação obrigatória: revalide seu acesso até HOJE</h3>
+          <p>Sua conta foi marcada para revalidação obrigatória ou o acesso será suspenso.</p>
+          <button type="button" disabled>Revalidar meu acesso agora</button>
+          <small>DEMONSTRAÇÃO — botão desativado</small>
+        </div>
+      </div>
+      <div class="signals">
+        <h3>Quatro sinais de alerta</h3>
+        <ol><li><strong>Autoridade</strong><span>Finge ser o suporte de TI</span></li><li><strong>Urgência</strong><span>Impõe prazo “até hoje”</span></li><li><strong>Medo</strong><span>Ameaça suspender o acesso</span></li><li><strong>Ação</strong><span>Centraliza tudo em um botão</span></li></ol>
+      </div>
+    </section>
+
+    <section id="defesa" class="section defense">
+      <div class="section-head"><span>03</span><div><small>DEFESA EM CAMADAS</small><h2>Cada elo precisa de uma barreira</h2></div></div>
+      <div class="matrix">
+        <div class="matrix-head"><span>ETAPA</span><span>RISCO</span><span>BARREIRA</span></div>
+        <div><strong>Rede</strong><span>Rede aberta ou falsa</span><b>VPN + rede confiável</b></div>
+        <div><strong>E-mail</strong><span>Remetente impostor</span><b>Confirmar com a TI</b></div>
+        <div><strong>Página</strong><span>Domínio semelhante</span><b>Abrir pelo favorito</b></div>
+        <div><strong>Credencial</strong><span>Senha reutilizada</span><b>MFA + alerta de acesso</b></div>
+        <div><strong>Permissão</strong><span>Privilégio excessivo</span><b>Menor privilégio</b></div>
+        <div><strong>Pagamento</strong><span>Alteração indevida</span><b>Dupla aprovação + logs</b></div>
+      </div>
+    </section>
+
+    <section id="quiz" class="section quiz">
+      <div class="section-head"><span>04</span><div><small>TESTE RÁPIDO</small><h2>Você clicaria?</h2></div></div>
+      <div class="quiz-box">
+        <p>Você recebe um e-mail urgente pedindo senha para evitar o bloqueio da conta. Qual é a primeira ação segura?</p>
+        <div class="answers">
+          <button data-correct="false">Clicar para não perder o prazo</button>
+          <button data-correct="true">Confirmar com a TI por um canal oficial</button>
+          <button data-correct="false">Responder ao próprio e-mail</button>
+        </div>
+        <div id="feedback" aria-live="polite">Selecione uma resposta.</div>
+      </div>
+    </section>
+
+    <section class="final">
+      <small>REGRA DE OURO</small>
+      <h2>Pare. Confira.<br><em>Proteja. Reporte.</em></h2>
+      <p>Se o pedido envolve senha, MFA, permissão ou pagamento, verifique por um canal oficial antes de agir.</p>
+    </section>
+  </main>
+  <footer><span>Cybersegurança · Apresentação final</span><span>Protótipo educacional — não coleta dados</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
